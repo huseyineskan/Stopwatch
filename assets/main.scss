@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 @mixin  center {
@@ -17,25 +18,36 @@ body{
 
 .container{
     @include center;
+    justify-content: flex-start;
     height: 100vh;
 
     .box{
+        margin-top: 100px;
         padding: 20px;
         background-color: #c7ecee;
         text-align: center;
-        height: 400px;
-        width: 400px;
+        height: 310px;
+        width: 310px;
         border-radius: 50%;
         @include center;
+        // box-shadow: 0 0 20px 10px #a0cfd1;
+        border: 5px solid #4b7375;
+        position: relative;
 
         .time-box{
+            h1{
+                font-size: 32px;
+                color: #17494b;
+            }
             h2{
-                margin-top: 20px;
+                margin-top: 10px;
+                font-size: 18px;
+                color: #87a7a9;
             }
     
             p{
                 font-weight: bold;
-                font-size: 32px;
+                font-size: 35px;
                 margin: 30px 0 20px;
             }
     
@@ -44,12 +56,56 @@ body{
                 border: none;
                 padding: 10px 20px;
                 font-weight: bold;
-                font-size: 16px;
+                font-size: 14px;
+                min-width: 90px;
     
                 &:hover{
                     cursor: pointer;
                 }
+
+                &#btn-lap{
+                    display: block;
+                    margin: 10px auto 0;
+                }
             }
         }
+
+        #brand{
+            position: absolute;
+            top: 20px;
+            font-size: 22px;
+            color: #a4ccce;
+        }
+
+        // &::after{
+        //     content: "";
+        //     width: 50px;
+        //     height: 20px;
+        //     position: absolute;
+        //     background-color: #253c3d;
+        //     border-top: 5px solid #4b7375;
+        //     top: 26px;
+        //     left: 26px;
+        //     transform: rotate(-45deg);
+        //     z-index: -1;
+        // }
+    }
+
+    .time-list{
+        margin-top: 20px;
+        ul{
+            list-style-type: decimal;
+            max-height: 100px;
+            width: 100px;
+        }
+    }
+}
+
+@keyframes shadowEffect {
+    from{
+        box-shadow: 0 0 30px 5px #6a9496;
+    }
+    to{
+        box-shadow: 0 0 30px 10px #fff;
     }
 }

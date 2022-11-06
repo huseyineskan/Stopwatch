@@ -1,6 +1,10 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -22,15 +26,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   height: 100vh;
 }
 
 .container .box {
+  margin-top: 100px;
   padding: 20px;
   background-color: #c7ecee;
   text-align: center;
-  height: 400px;
-  width: 400px;
+  height: 310px;
+  width: 310px;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,15 +53,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 5px solid #4b7375;
+  position: relative;
+}
+
+.container .box .time-box h1 {
+  font-size: 32px;
+  color: #17494b;
 }
 
 .container .box .time-box h2 {
-  margin-top: 20px;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #87a7a9;
 }
 
 .container .box .time-box p {
   font-weight: bold;
-  font-size: 32px;
+  font-size: 35px;
   margin: 30px 0 20px;
 }
 
@@ -62,10 +79,55 @@ body {
   border: none;
   padding: 10px 20px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
+  min-width: 90px;
 }
 
 .container .box .time-box button:hover {
   cursor: pointer;
+}
+
+.container .box .time-box button#btn-lap {
+  display: block;
+  margin: 10px auto 0;
+}
+
+.container .box #brand {
+  position: absolute;
+  top: 20px;
+  font-size: 22px;
+  color: #a4ccce;
+}
+
+.container .time-list {
+  margin-top: 20px;
+}
+
+.container .time-list ul {
+  list-style-type: decimal;
+  max-height: 100px;
+  width: 100px;
+}
+
+@-webkit-keyframes shadowEffect {
+  from {
+    -webkit-box-shadow: 0 0 30px 5px #6a9496;
+            box-shadow: 0 0 30px 5px #6a9496;
+  }
+  to {
+    -webkit-box-shadow: 0 0 30px 10px #fff;
+            box-shadow: 0 0 30px 10px #fff;
+  }
+}
+
+@keyframes shadowEffect {
+  from {
+    -webkit-box-shadow: 0 0 30px 5px #6a9496;
+            box-shadow: 0 0 30px 5px #6a9496;
+  }
+  to {
+    -webkit-box-shadow: 0 0 30px 10px #fff;
+            box-shadow: 0 0 30px 10px #fff;
+  }
 }
 /*# sourceMappingURL=main.css.map */
