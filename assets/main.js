@@ -23,6 +23,16 @@ pause.onclick = function(){
 reset.onclick = allReset;
 lap.onclick = lapAdd;
 
+function allReset(){
+    tens = "00";
+    seconds = "00";
+    minutes = "00";
+    tensValue.textContent = tens;
+    secondsValue.textContent = seconds;
+    minutesValue.textContent = minutes;
+    lapList.textContent = "";
+}
+
 function timer(){
     tens++; // increase tens
 
@@ -62,16 +72,6 @@ function timer(){
     if(minutes > 59){
         allReset(); // Reset all value
     }
-}
-
-function allReset(){
-    tens = "00";
-    seconds = "00";
-    minutes = "00";
-    tensValue.textContent = tens;
-    secondsValue.textContent = seconds;
-    minutesValue.textContent = minutes;
-    lapList.textContent = "";
 }
 
 function lapAdd(){
