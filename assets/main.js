@@ -13,7 +13,7 @@ var tens = 00;
 var interval;
 
 start.onclick = function(){
-    interval = setInterval(timer, 1); //1000ms = 1sec
+    interval = setInterval(timer, 10); //1000ms = 1sec
 }
 
 pause.onclick = function(){
